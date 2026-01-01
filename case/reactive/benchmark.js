@@ -37,24 +37,30 @@ createSuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -88,24 +94,30 @@ readSuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -134,24 +146,30 @@ writeSuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -204,24 +222,30 @@ reactiveSuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -240,10 +264,10 @@ nestedSuite
       level1: {
         level2: {
           level3: {
-            value: 0
-          }
-        }
-      }
+            value: 0,
+          },
+        },
+      },
     });
     obj.level1.level2.level3.value = 100;
   })
@@ -252,10 +276,10 @@ nestedSuite
       level1: {
         level2: {
           level3: {
-            value: 0
-          }
-        }
-      }
+            value: 0,
+          },
+        },
+      },
     });
     obj.level1.level2.level3.value = 100;
   })
@@ -264,10 +288,10 @@ nestedSuite
       level1: {
         level2: {
           level3: {
-            value: 0
-          }
-        }
-      }
+            value: 0,
+          },
+        },
+      },
     });
     obj.level1.level2.level3.value = 100;
   })
@@ -276,34 +300,40 @@ nestedSuite
       level1: {
         level2: {
           level3: {
-            value: 0
-          }
-        }
-      }
+            value: 0,
+          },
+        },
+      },
     });
     obj.level1.level2.level3.value = 100;
   })
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -344,24 +374,30 @@ arraySuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');
@@ -422,24 +458,30 @@ batchSuite
   .on('cycle', (event) => {
     console.log('  ' + String(event.target));
   })
-  .on('complete', function() {
+  .on('complete', function () {
     const fastest = this.filter('fastest');
     console.log('  ✅ 最快: ' + fastest.map('name'));
-    
+
     // 显示详细分析
-    const results = this.map(bench => ({
+    const results = this.map((bench) => ({
       name: bench.name,
       hz: bench.hz,
       rme: bench.stats.rme,
-      samples: bench.stats.sample.length
+      samples: bench.stats.sample.length,
     }));
-    
+
     console.log('  📈 稳定性分析:');
-    results.forEach(r => {
-      const stability = r.rme < 1 ? '⭐⭐⭐⭐⭐' : 
-                       r.rme < 5 ? '⭐⭐⭐⭐' : 
-                       r.rme < 10 ? '⭐⭐⭐' : 
-                       r.rme < 50 ? '⭐⭐' : '⭐';
+    results.forEach((r) => {
+      const stability =
+        r.rme < 1
+          ? '⭐⭐⭐⭐⭐'
+          : r.rme < 5
+            ? '⭐⭐⭐⭐'
+            : r.rme < 10
+              ? '⭐⭐⭐'
+              : r.rme < 50
+                ? '⭐⭐'
+                : '⭐';
       console.log(`     ${r.name.split(' - ')[0]}: ${stability} (误差 ±${r.rme.toFixed(2)}%)`);
     });
     console.log('');

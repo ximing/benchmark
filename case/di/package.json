@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "bench:tinybench": "npm run build && node dist/index-tinybench.js",
-    "bench:benchmark": "npm run build && node dist/index-benchmark.js"
+    "bench:tinybench": "npm run build && node dist/tinybench.js",
+    "bench:benchmark": "npm run build && node dist/benchmark.js"
   },
   "dependencies": {
     "benchmark": "^2.1.4",

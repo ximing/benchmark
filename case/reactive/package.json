@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "benchmark": "node index.js",
-    "bench:tinybench": "node index-tinybench.js",
-    "bench:mitata": "node index-mitata.js",
-    "bench:old": "node index.js"
+    "benchmark": "node benchmark.js",
+    "bench:tinybench": "node tinybench.js",
+    "bench:mitata": "node mitata.js"
   },
   "dependencies": {
     "@formily/reactive": "^2.3.7",
