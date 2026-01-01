@@ -1,0 +1,23 @@
+{
+  "name": "di",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "bench:tinybench": "npm run build && node dist/index-tinybench.js",
+    "bench:benchmark": "npm run build && node dist/index-benchmark.js"
+  },
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "inversify": "^7.10.8",
+    "reflect-metadata": "^0.2.2",
+    "tinybench": "^2.9.0",
+    "tsyringe": "^4.10.0",
+    "typedi": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^2.1.5",
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3"
+  }
+}
